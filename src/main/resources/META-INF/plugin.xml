@@ -1,0 +1,43 @@
+<idea-plugin version="2">
+    <id>com.github.shiraji.kewinstanceinspection</id>
+    <name>Fragment kewInstance Inspection</name>
+    <vendor email="isogai.shiraji@gmail.com" url="https://github.com/shiraji">Shiraji</vendor>
+
+    <description><![CDATA[
+        This plugin add a custom inspection that checks Fragment implements a companion object method of creating its instance.
+        If the class is abstract, it won't warn to implement newInstance method.
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <p>1.0.0</p>
+        <ul>
+            <li>Initial release</li>
+        </ul>
+    ]]>
+    </change-notes>
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="143"/>
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <depends>org.jetbrains.kotlin</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <localInspection enabledByDefault="true"
+                         groupBundle="messages.InspectionsBundle"
+                         groupPath="Android"
+                         implementationClass="com.github.shiraji.kewinstanceinspection.inspection.KewInstanceInspection"
+                         language="kotlin" level="WARNING"/>
+    </extensions>
+
+    <application-components>
+    </application-components>
+
+    <project-components>
+    </project-components>
+
+    <actions>
+    </actions>
+
+</idea-plugin>
