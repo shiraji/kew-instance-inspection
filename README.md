@@ -1,5 +1,7 @@
 # Fragment kewInstance Inspection
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Fragment%20kewInstance%20Inspection-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3786)
+
 This plugin add an inspection that check if Activity implements following method.
 
 ```kotlin
