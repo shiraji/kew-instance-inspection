@@ -54,10 +54,8 @@ class KewInstanceInspectionVisitor(val holder: ProblemsHolder, val name: String)
 
             val method = factory.createFunction(
                     """
-                    fun $methodName(): ${klass.name} {
-                    val fragment = ${klass.name}()
-                    return fragment
-                    }
+                    |fun $methodName() = ${klass.name}().apply {
+                    |}
                     """.trimMargin()
             )
 

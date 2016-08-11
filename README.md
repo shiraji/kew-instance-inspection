@@ -6,9 +6,7 @@ This plugin add an inspection that check if Activity implements following method
 
 ```kotlin
     companion object {
-        fun newInstance(): SampleFragment {
-            val fragment = SampleFragment()
-            return fragment
+        fun newInstance() = SampleFragment().apply {
         }
     }
 ```
